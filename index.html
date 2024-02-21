@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/main.css">
+        <!-- This script tag bootstraps PyScript -->
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
+        <script type="py" src="./scripts/main.py"  config="./scripts/pyscript.toml"></script>
+    </head>
+    <body>
+        <main>
+            <div>
+                <h1>Hello!</h1>
+                <p>Instruction : Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla consectetur quod necessitatibus corporis assumenda quasi error sunt rerum provident perferendis iure iusto sed laudantium, fuga nihil. Fugit odio temporibus quia nemo laborum ipsa sit laboriosam at, quas voluptatum dolorem, impedit sapiente? Obcaecati amet laudantium, maxime aut nihil dolorum nemo.</p>
+            </div>
+            <div class="row">
+                <div id="leftSelection">
+                    <div class="row">
+                        <h2>Square</h2>
+                    </div>
+                    <div class="row">
+                        <button class="arrow square" py-click="minus" >
+                            <img class="arrow reverse square" src="https://github.com/TortueDeBois/HelloGitPage/blob/main/assets/static/arrow.png?raw=true">
+                        </button>
+                        <p class="name index square">-1</p>
+                        <button class="arrow square" py-click="plus" >
+                            <img class="arrow square" src="https://github.com/TortueDeBois/HelloGitPage/blob/main/assets/static/arrow.png?raw=true">
+                        </button>
+                    </div>
+                    <div class="row">
+                        <h2>Triangle</h2>
+                    </div>
+                    <div class="row">
+                        <button class="arrow triangle" py-click="minus" >
+                            <img class="arrow reverse triangle" src="https://github.com/TortueDeBois/HelloGitPage/blob/main/assets/static/arrow.png?raw=true">
+                        </button>
+                        <p class="name index triangle">-1</p>
+                        <button class="arrow triangle" py-click="plus" >
+                            <img class="arrow triangle" src="https://github.com/TortueDeBois/HelloGitPage/blob/main/assets/static/arrow.png?raw=true">
+                        </button>
+                    </div>
+                </div>
+                <div id="panelCenter">
+                    <div>
+                        <img class="loading" id="preview" height="400" width="800" src="https://github.com/TortueDeBois/HelloGitPage/blob/init_local_assets/assets/static/loading.gif?raw=true">
+                    </div>
+                    <div class="row spaceAround">
+                        <button py-click="randomize">Aléatoire</button>
+                        <button py-click="dl_preview">Télécharger l'aperçu</button>
+                    </div>
+                </div>
+                <div  id="rightSelection">
+                    <div class="row">
+                        <h2>Square</h2>
+                    </div>
+                    <div class="row">
+                        <button class="arrow square" py-click="minus">
+                            <img class="arrow reverse square" src="https://github.com/TortueDeBois/HelloGitPage/blob/main/assets/static/arrow.png?raw=true">
+                        </button>
+                        <p class="name index square" id="squareIndex">-1</p>
+                        <button class="arrow square" py-click="plus">
+                            <img class="arrow square" src="https://github.com/TortueDeBois/HelloGitPage/blob/main/assets/static/arrow.png?raw=true">
+                        </button>
+                    </div>
+                    <div class="row">
+                        <h2>Triangle</h2>
+                    </div>
+                    <div class="row">
+                        <button class="arrow triangle" py-click="minus">
+                            <img class="arrow reverse triangle" src="https://github.com/TortueDeBois/HelloGitPage/blob/main/assets/static/arrow.png?raw=true">
+                        </button>
+                        <p class="name index triangle">-1</p>
+                        <button class="arrow triangle" py-click="plus">
+                            <img class="arrow triangle" src="https://github.com/TortueDeBois/HelloGitPage/blob/main/assets/static/arrow.png?raw=true">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h2>Seed</h2>
+            </div>
+            <div class="row space">
+                <p id="seedArea"></p>
+                <button py-click="copy_seed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512">
+                        <title>Copier la seed</title>
+                        <rect x="128" y="128" width="336" height="336" rx="57" ry="57" style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px"/>
+                        <path d="M383.5,128l.5-24a56.16,56.16,0,0,0-56-56H112a64.19,64.19,0,0,0-64,64V328a56.16,56.16,0,0,0,56,56h24" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
+                    </svg> 
+                </button>
+            </div>
+        </main>
+    </body>
+</html>

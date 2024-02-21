@@ -1,0 +1,2 @@
+name = "Page test sur github"
+packages = ["pillow"]
