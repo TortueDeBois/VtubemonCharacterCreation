@@ -1,4 +1,4 @@
-from js import File, Uint8Array, window, navigator, event
+from js import File, Uint8Array, window, navigator
 import js
 from io import BytesIO
 import random
