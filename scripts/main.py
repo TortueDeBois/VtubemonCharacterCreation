@@ -47,6 +47,8 @@ async def draw_image():
     image_name = images[0].name
     images = await convert_to_python_image(images)
     
+    images = resize(images)
+
     my_image = images[0]
     for x in range(1,len(images)):
         my_image.paste(images[x], (0,0), mask = images[x])
@@ -103,6 +105,11 @@ async def js_image_to_python_image(jsImage):
     bytes_list = bytearray(array_buf)
     my_bytes = BytesIO(bytes_list) 
     return Image.open(my_bytes)
+
+def resize(images):
+    for image in images :
+        image = image.crop((0, 0, 110, 72))
+    return images
 
 def get_seed():
     seed = ""
