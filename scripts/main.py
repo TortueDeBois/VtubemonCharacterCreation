@@ -84,6 +84,7 @@ async def convert_to_python_image(images):
 def set_metadata():
     metadata = PngInfo()
     metadata.add_itxt("Copyright", "Réalisé à partir des tiles de Limezu (https://limezu.itch.io/)")
+    metadata.add_itxt("Seed", get_seed())
     return metadata
 
 # Get image from pyodide to an png file used by js
