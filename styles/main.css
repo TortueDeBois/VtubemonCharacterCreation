@@ -8,10 +8,16 @@ main{
     width: auto;
 }
 .ready{
+    /*size*/
     height: 400px; 
     width: 800px;
+    /*center*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #preview{
+    /*maintain pixel when the image is resized*/
     image-rendering: pixelated;
 }
 .row{
