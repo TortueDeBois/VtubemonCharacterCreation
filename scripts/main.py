@@ -47,7 +47,9 @@ async def draw_image():
     image_name = images[0].name
     images = await convert_to_python_image(images)
     
+    js.console.log(images[0].width)
     images = resize(images)
+    js.console.log(images[0].width)
 
     my_image = images[0]
     for x in range(1,len(images)):
