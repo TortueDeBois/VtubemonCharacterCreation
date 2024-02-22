@@ -111,7 +111,7 @@ async def js_image_to_python_image(jsImage):
 def resize(images):
     js.console.log("2", images[0].width, images[0].height)
     for index in range(len(images)) :
-        images[index] = images[index].resize((110, 72))
+        images[index] = images[index].resize((110, 72),Image.NEAREST, (0,0,110,72))
     js.console.log("3", images[0].width, images[0].height)
     return images
 
