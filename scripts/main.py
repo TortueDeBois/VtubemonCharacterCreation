@@ -47,9 +47,9 @@ async def draw_image():
     image_name = images[0].name
     images = await convert_to_python_image(images)
     
-    js.console.log(images[0].width)
+    js.console.log("1",images[0].width)
     images = resize(images)
-    js.console.log(images[0].width)
+    js.console.log("4",images[0].width)
 
     my_image = images[0]
     for x in range(1,len(images)):
@@ -109,8 +109,10 @@ async def js_image_to_python_image(jsImage):
     return Image.open(my_bytes)
 
 def resize(images):
+    js.console.log("2",images[0].width)
     for image in images :
         image = image.crop((0, 0, 110, 72))
+    js.console.log("3",images[0].width)
     return images
 
 def get_seed():
